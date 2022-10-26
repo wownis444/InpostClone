@@ -25,13 +25,7 @@ class PackageInteractionFragment(val packageInteractionData: PackageInteractionD
 
         binding.addButton.setOnClickListener(){
 
-            val pack  = com.example.inpostclone.Package(1234,"Shiping", "John Smith")
-            val user = User("Example User", requireActivity().applicationContext )
-            user.packageManager.addPackage(pack);
         }
-
-
-
 
         return binding.root
 

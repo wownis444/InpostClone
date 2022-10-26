@@ -30,14 +30,11 @@ class MainActivity : AppCompatActivity() {
         binding.viewPager2.adapter = MainPageFragmentAdapter(this, actions);
         val tabConfigurationStrategy = TabLayoutMediator.TabConfigurationStrategy { tab, position ->
             tab.text = actions[position];
-
         }
 
         TabLayoutMediator(binding.navigationBar,binding.viewPager2, tabConfigurationStrategy).attach()
 
         createNotificationChanel()
-
-
     }
 
 
