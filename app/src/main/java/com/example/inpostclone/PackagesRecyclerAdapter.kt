@@ -23,7 +23,6 @@ class PackagesRecyclerAdapter(var packages : List<Package>) : RecyclerView.Adapt
         holder.binding.status.text = packages[position].status;
         holder.binding.packageNo.text = packages[position].packageNo.toString();
 
-        TODO("Not yet implemented")
     }
 
     override fun getItemCount(): Int {

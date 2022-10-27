@@ -8,12 +8,9 @@ import androidx.lifecycle.MutableLiveData
 
 class PackageManager() {
 
-    private val packages = mutableListOf<com.example.inpostclone.Package>()
-    lateinit var havePackages: MutableLiveData<Boolean>
+     val packages = mutableListOf<com.example.inpostclone.Package>()
+     var havePackages = MutableLiveData<Boolean>(false)
 
-    init {
-        havePackages.value = false;
-    }
 
     fun addPackage(pack : Package){
         packages.add(pack);
@@ -23,6 +20,5 @@ class PackageManager() {
         }else if(packages.size == 0){
             havePackages.value = false;
         }
-
     }
 }

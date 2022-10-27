@@ -11,17 +11,12 @@ import androidx.lifecycle.ViewModel
 class ActivityViewModel(application: Application) : AndroidViewModel(application) {
 
     //    val pack  = com.example.inpostclone.Package(1234,"Shiping", "John Smith")
-    private val user = User("Example User")
+    val user = User("Example User")
     private val havePackage = MutableLiveData<Boolean>();
 
-    init {
-
-    }
-
-    public fun addPackage(pack: com.example.inpostclone.Package) {
+    fun addPackage(pack: com.example.inpostclone.Package) {
         user.packageManager.addPackage(pack)
         sendNotyfication()
-
     }
 
     private fun sendNotyfication() {
@@ -35,7 +30,6 @@ class ActivityViewModel(application: Application) : AndroidViewModel(application
             .setSmallIcon(R.drawable.ic_baseline_markunread_mailbox_24)
             .setContentText("Click to see package details")
             .build()
-
         notificationManager.notify(1, notification);
     }
 }
