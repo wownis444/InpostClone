@@ -3,6 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
     android:background="@color/cardview_dark_background"
     android:layout_height="200dp">
 
@@ -82,12 +86,13 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:rotationY="180"
-        app:tint="#FFEB3B"
         app:layout_constraintBottom_toBottomOf="@+id/more"
         app:layout_constraintStart_toEndOf="@+id/more"
         app:layout_constraintTop_toTopOf="@+id/more"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        app:tint="#FFEB3B" />
 
     <ImageView
         android:id="@+id/imageView2"

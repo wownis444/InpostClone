@@ -9,6 +9,7 @@
 
 
     <ImageView
+        android:id="@+id/topImage"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginStart="16dp"
@@ -30,19 +31,22 @@
         app:layout_constraintEnd_toStartOf="@+id/addButton"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
-        android:background="#FFEB3B"
+        app:backgroundTint="#FFEB3B"
+        app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="60dp"
         app:srcCompat="@android:drawable/ic_input_add"
         app:tint="#000000" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/packagesList"
         android:layout_width="409dp"
         android:layout_height="0dp"
         android:visibility="gone"
